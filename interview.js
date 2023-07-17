@@ -35,6 +35,20 @@ function isPalindrone(inputString) {
 }
 console.log(isPalindrone('123443215'), pal);
 
+const rot13Encoding = function(inputString) {
+// Write your code here
+  const input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    const output = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+    let encoded = '';
+    for (let i=0; i < inputString.length; i++) {
+        const index = input.indexOf(inputString[i]);
+        encoded += output[index];
+    }
+
+    return encoded;
+  
+}
+console.log(rot13Encoding('hello'));
 
 function moveZeros(nums) {
  if(nums.length>=1 && nums.length<=104) {
